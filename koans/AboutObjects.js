@@ -66,7 +66,7 @@ describe("About Objects", function() {
     it("should not have the detonator however", function() {
       var hasDetonator = "theDetonator" in meglomaniac;
      
-      expect(hasDetonator).toBe("theDetonator");
+      expect(hasDetonator).toBe(false);
     });    
   });
 
