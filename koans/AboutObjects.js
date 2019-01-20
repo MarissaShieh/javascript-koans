@@ -23,8 +23,7 @@ describe("About Objects", function() {
       mastermind : "Brain", 
       henchman: "Pinky",
       battleCry: function(noOfBrains) {
-        return ("They are " + this.henchman + " and the" +
-          Array(noOfBrains + 1).join(" ") + this.mastermind);
+        return ("They are " + this.henchman + " and the" + Array(noOfBrains + 1).join(" ") + this.mastermind);
       }
     };
    
@@ -67,20 +66,20 @@ describe("About Objects", function() {
     it("should not have the detonator however", function() {
       var hasDetonator = "theDetonator" in meglomaniac;
      
-      expect(hasDetonator).toBe(FILL_ME_IN);
+      expect(hasDetonator).toBe("theDetonator");
     });    
   });
 
   it("should know that properties can be added and deleted", function() {
     var meglomaniac = { mastermind : "Agent Smith", henchman: "Agent Smith" };
 
-    expect("secretary" in meglomaniac).toBe(FILL_ME_IN);
+    expect("secretary" in meglomaniac).toBe(undefined);
 
     meglomaniac.secretary = "Agent Smith";
-    expect("secretary" in meglomaniac).toBe(FILL_ME_IN);
+    expect("secretary" in meglomaniac).toBe("Agent Smith");
     
     delete meglomaniac.henchman;
-    expect("henchman" in meglomaniac).toBe(FILL_ME_IN);
+    expect("henchman" in meglomaniac).toBe(undefined);
   });
 
 
